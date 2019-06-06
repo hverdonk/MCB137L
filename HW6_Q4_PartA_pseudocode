@@ -1,0 +1,13 @@
+%ith bin, jth timepoint. every quantity must have units of # of proteins
+
+for each timestep except the first one: 
+	for each bin along the AP axis except the first and last one: %let's say there's 100 for now
+		if the bin is not first or last:
+			# of proteins in bin=# of proteins in bin at previous timestep
+			N(i, j)=N(i, j-1)-2k*dt*N(i, j-1)+kdtN(i-1, j-1)+kdtN(i+1, j-1) %diffusion
+					-gamma*dt*N(i, j-1) %degradation
+	N(1, j)= N(i, j-1)-2k*dt*N(i, j-1)+kdtN(i+1, j-1) %diffusion w/o kdtN(i-1, j-1) b/c no previous box
+			-gamma*dt*N(i, j-1) %degradation
+			+rdtM %protein production
+	N(last, j)=N(i, j-1)-2k*dt*N(i, j-1)+kdtN(i-1, j-1) %diffusion w/o kdtN(i+1, j-1) b/c no next box
+					-gamma*dt*N(i, j-1) %degradation
