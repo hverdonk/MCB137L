@@ -1,0 +1,8 @@
+Data from F., A. H. Morrison and T. Gregor (2013). "Dynamic interpretation of maternal inputs by the Drosophila segmentation gene network." Proc Natl Acad Sci U S A 110(17): 6724-6729.
+
+Folder structure:
+
+0.52x: Corresponds to line 3 in table S1 in the paper.
+1.0x: Corresponds to line 9 in table S1 in the paper. This is wild-type Bicoid dosage
+1.57x: Corresponds to line 14 in table S1 in the paper.
+2.34x: Corresponds to line 19 in table S1 in the paper.
